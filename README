@@ -1,0 +1,16 @@
+This is a Nuxeo 5.5 plugin that solves a problem related with serial workflows.
+
+Let's suppose a serial workflow with three validators:
+
+ Validator 1
+ Validator 2
+ Validator 3
+
+When validator 1 validates workflow, it is validator 2 turn. If validator 2 refuses validation, the turn goes back to validator 1 to validate again.
+
+If validator 1 validates, default Nuxeo's features is to give turn to validator 3, when it should be validator's 2 turn.
+
+This plugin solves this issue.
+
+@author: rubencarreno
+@company: athento

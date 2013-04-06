@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion> 
+
+	<groupId>org.yerbabuena.ecm.athento</groupId>
+	<artifactId>athento-serial-review</artifactId>
+	<version>1.0</version>
+	<packaging>jar</packaging>
+	<name>athento-serial-review</name>
+	<description></description>
+
+	<licenses>
+		<license>
+			<name>GPL</name>
+			<url>http://www.gnu.org/copyleft/gpl.html</url>
+		</license>
+	</licenses>
+
+	<organization>
+		<name>Yerbabuena Software</name>
+		<url>http://www.yerbabuena.es</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<id>rubencarreno</id>
+			<name>Rubén Carreño Villalba</name>
+			<email>rubencarreno@yerbabuena.es</email>
+			<organization>Yerbabuena Software</organization>
+			<organizationUrl>http://www.yerbabuena.es</organizationUrl>
+		</developer>
+		<developer>
+			<id>franciscogonzalez</id>
+			<name>Francisco JosÃ© GonzÃ¡lez Barea</name>
+			<email>franciscogonzalez@yerbabuena.es</email>
+			<organization>Yerbabuena Software</organization>
+			<organizationUrl>http://www.yerbabuena.es</organizationUrl>
+		</developer>
+	</developers>
+
+	<inceptionYear>${copyright.year}</inceptionYear>
+
+	<distributionManagement>
+		<repository>
+			<id>athento-public</id>
+			<url>http://maven2.yerbabuena.es/artifactory/athento-public</url>
+			<layout>default</layout>
+		</repository>
+		<snapshotRepository>
+			<uniqueVersion>true</uniqueVersion>
+			<id>athento-public-snapshot</id>
+			<url>http://maven2.yerbabuena.es/artifactory/athento-public-snapshot</url>
+			<layout>default</layout>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.nuxeo.ecm.platform</groupId>
+			<artifactId>nuxeo-platform-jbpm-api</artifactId>
+			<version>5.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.nuxeo.ecm.platform</groupId>
+			<artifactId>nuxeo-platform-task-api</artifactId>
+			<version>5.5</version>
+		</dependency>
+		<dependency>
+			<artifactId>nuxeo-platform-jbpm-core</artifactId>
+			<groupId>org.nuxeo.ecm.platform</groupId>
+			<version>5.5</version>
+		</dependency>
+		
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.8</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifestFile>
+							src/main/resources/META-INF/MANIFEST.MF
+						</manifestFile>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 1
+Bundle-Name: Athento Serial Review
+Bundle-SymbolicName: org.athento.serial.review;singleton:=true
+Bundle-Vendor: Athento
+Bundle-Category: web,stateless
+Nuxeo-Component: OSGI-INF/jbpmService-contrib.xml
+Require-Bundle: org.nuxeo.ecm.platform.jbpm.web
